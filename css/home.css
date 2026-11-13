@@ -1,0 +1,24 @@
+.feature-description {
+    padding: var(--space-4) var(--space-8);
+    margin: var(--space-4) 0;
+    width: 70%;
+}
+
+.call-to-action {
+    background-color: var(--secondary-color);
+    padding: var(--space-4) var(--space-8);
+    margin: var(--space-4) 0;
+    width: 70%;
+    border-radius: var(--radius);
+    margin-inline: auto;
+    color: var(--light-color);
+    text-align: center;
+}
+
+.button {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius);
+    text-decoration: none;
+}

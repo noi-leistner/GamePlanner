@@ -1,0 +1,14 @@
+:root {
+    --primary-color: #255957; /*or #408175*/
+    --secondary-color: #437C90;
+    --background-color: #EEEBD3;
+    --dark-color: black;
+    --light-color: white;
+    --red-color: #d9534f;
+    --space-2: .5rem;
+    --space-4: 1rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --radius: .75rem;
+    --font-family: serif;
+}
