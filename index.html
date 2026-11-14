@@ -12,7 +12,8 @@
     <header>
         <nav>
             <a href="index.html" class="logo">GamePlanner+</a>
-            <ul>
+            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+            <ul id="nav-links">
                 <li><a href="library.html">Library</a></li>
                 <li><a href="explorer.html">Explorer</a></li>
                 <li><a href="gameguide.html">GameGuide</a></li>
@@ -22,19 +23,37 @@
     </header>
 
     <body>
-        <div class="feature-description">
-            <h1>Welcome to GamePlanner+</h1>
-            <p><b>Stop losing track of what you’re playing. GamePlanner+ keeps your whole gaming life organized in one place.</b></p>
-            <br>
-            <h2>Organize your collections</h2>
-            <p>Sort your games into collections like Currently Playing, Pending or Completed, or make your own. Give each one a name, a category and a description, and edit them whenever your plans change.</p>
-            <h2>Log every session</h2>
-            <p>Record when you played, how many hours you put in, and notes on your progress. See exactly how much time you’ve spent on each game, and never forget where you left off.</p>
-            <h2>Explore 500,000+ games</h2>
-            <p>Search by name, genre or platform and browse cover art, ratings and details for every game. Find something you like and add it to a collection in one click.</p>
-            <h2>Ask GameGuide what to play next</h2>
-            <p>Not sure what to start? Tell our AI assistant which genres you enjoy or how much time you have, and it will suggest your next game.</p>
-        </div>
+        <figure class="image-card">
+            <img src="assets/img/controller.jpg" alt="Player gaming with a controller">
+            <figcaption class="image-overlay">
+                <span class="image-overlay-title">Game Planner+</span>
+                <span class="image-overlay-subtitle">Stop losing track of what you’re playing.</span>
+            </figcaption>
+        </figure>
+
+        <section class="feature-description">
+            <h2>Keep your whole gaming life organized in one place.</h2>
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <h3>Organize your collections</h3>
+                    <p>Sort your games into collections like Currently Playing, Pending or Completed, or make your own. Give each one a name, a category and a description, and edit them whenever your plans change.</p>
+                </article>
+                <article class="feature-card">
+                    <h3>Log every session</h3>
+                    <p>Record when you played, how many hours you put in, and notes on your progress. See exactly how much time you've spent on each game, and never forget where you left off.</p>
+                </article>
+                <article class="feature-card">
+                    <h3>Explore 500,000+ games</h3>
+                    <p>Search by name, genre or platform and browse cover art, ratings and details for every game. Find something you like and add it to a collection in one click.</p>
+                </article>
+                <article class="feature-card">
+                    <h3>Ask GameGuide what to play next</h3>
+                    <p>Not sure what to start? Tell our AI assistant which genres you enjoy or how much time you have, and it will suggest your next game.</p>
+                </article>
+            </div>
+        </section>
+
+        <br>
 
         <div class="call-to-action">
             <h2>Get started</h2>

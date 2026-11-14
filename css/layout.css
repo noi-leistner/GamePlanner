@@ -1,3 +1,8 @@
+body {
+    margin: 0;
+    background-color: var(--background-color);
+}
+
 header, footer {
     background-color: var(--primary-color);
     padding-inline: var(--space-4);
@@ -14,6 +19,13 @@ footer {
     margin-top: var(--space-4);
     padding-block: 0.5rem;
     font-size: 1.15rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 nav ul {
@@ -35,18 +47,32 @@ nav a:hover {
     text-decoration: underline;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
 }
 
-body {
-    margin: 0;
-    background-color: var(--background-color);
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--light-color);
+    font-size: 2rem;
+}
+
+@media (max-width: 700px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        padding-top: var(--space-4);
+    }
+
+    nav ul.open {
+        display: flex;
+    }
 }
