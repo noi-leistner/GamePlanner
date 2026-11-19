@@ -7,6 +7,8 @@
         <link rel="stylesheet" href="css/layout.css">
         <link rel="stylesheet" href="css/home.css">
         <link rel="stylesheet" href="css/base.css">
+
+        <script src="js/home.js" defer></script>
     </head>
 
     <header>
@@ -56,10 +58,73 @@
         <br>
 
         <div class="call-to-action">
-            <h2>Get started</h2>
-            <p>Find new games in the explorer page!</p>
-            <a href="explorer.html" class="button">Explore</a>
+            <div class="cta-text">
+                <h2>Get started</h2>
+                <p>Find new games in the explorer page!</p>
+            </div>
+            <a href="explorer.html" class="button cta-button">Explore</a>
         </div>
+
+        <section class="how-it-works">
+            <h2>How it works</h2>
+            <ol class="steps">
+                <li class="step">
+                    <span class="step-number">1</span>
+                    <h3>Create a collection</h3>
+                    <p>Make lists like Currently Playing, Pending or Completed, or invent your own.</p>
+                </li>
+                <li class="step">
+                    <span class="step-number">2</span>
+                    <h3>Find your games</h3>
+                    <p>Search the Explorer by name, genre or platform and add games to any collection in one click.</p>
+                </li>
+                <li class="step">
+                    <span class="step-number">3</span>
+                    <h3>Log your sessions</h3>
+                    <p>After you play, record the date, the hours you put in and notes on your progress.</p>
+                </li>
+                <li class="step">
+                    <span class="step-number">4</span>
+                    <h3>Get your next pick</h3>
+                    <p>Tell GameGuide your favourite genres or how much time you have, and it will suggest what to play next.</p>
+                </li>
+            </ol>
+        </section>
+
+        <section class="testimonials">
+            <h2>Testimonials</h2>
+            <div class="carousel">
+                <button class="carousel-btn prev" aria-label="Previous testimonial">&lt;</button>
+
+                <div class="testimonial-list" aria-live="polite">
+                    <figure class="testimonial active">
+                        <img src="assets/img/Person-LauraM.jpg" alt="Photo of Laura M.">
+                        <div class="testimonial-text">
+                            <figcaption>Laura M.</figcaption>
+                            <p>I finally finished games I'd started years ago. Seeing my hours logged keeps me motivated.</p>
+                        </div>
+                    </figure>
+
+                    <figure class="testimonial">
+                        <img src="assets/img/Person-MarcR.jpg" alt="Photo of Marc R.">
+                        <div class="testimonial-text">
+                            <figcaption>Marc R.</figcaption>
+                            <p>My backlog was a mess across three platforms. Now it's all in one place and I know exactly what's next.</p>
+                        </div>
+                    </figure>
+
+                    <figure class="testimonial">
+                        <img src="assets/img/Person-SofiaT.jpg" alt="Photo of Sofia T.">
+                        <div class="testimonial-text">
+                            <figcaption>Sofia T.</figcaption>
+                            <p>I told GameGuide I only had an hour a night, and it suggested a game I ended up loving.</p>
+                        </div>
+                    </figure>
+                </div>
+
+                <button class="carousel-btn next" aria-label="Next testimonial">&gt;</button>
+            </div>
+        </section>
     </body>
 
     <footer>
