@@ -10,6 +10,7 @@
 
         <script src="js/nav.js" defer></script>
         <script src="js/config.js" defer></script>
+        <script src="js/storage.js" defer></script>
         <script src="js/explorer.js" defer></script>
     </head>
     
@@ -45,7 +46,23 @@
 
             <section id="game-grid" class="auto-grid"></section>
             <button id="load-more" class="button" hidden>Load more</button>
-            <p class="attribution">Game data from <a href="https://rawg.io" target="_blank">RAWG</a></p>
+
+            <dialog class="dialog">
+                <form class="dialog-form">
+                    <h2>Add to collection</h2>
+                    <p id="add-game-name"></p>
+
+                    <label for="add-collection">Collection</label>
+                    <select id="add-collection" required></select>
+
+                    <p id="add-message"></p>
+
+                    <div class="form-buttons">
+                        <button type="button" id="cancel-add" class="button button-secondary">Cancel</button>
+                        <button type="submit" class="button">Add</button>
+                    </div>
+                </form>
+            </dialog>
         </main>
 
         <footer>

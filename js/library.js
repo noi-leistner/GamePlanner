@@ -1,6 +1,6 @@
 const list = document.querySelector('#collection-list');
-const dialog = document.querySelector('#collection-dialog');
-const form = document.querySelector('#collection-form');
+const dialog = document.querySelector('.dialog');
+const form = document.querySelector('.dialog-form');
 const formTitle = form.querySelector('h2');
 const nameInput = document.querySelector('#collection-name');
 const typeInput = document.querySelector('#collection-type');
@@ -17,7 +17,10 @@ function renderCollections() {
         item.classList.add('collection-card');
 
         const title = document.createElement('h2');
-        title.textContent = collection.name;
+        const link = document.createElement('a');
+        link.href = `collection.html?id=${collection.id}`;
+        link.textContent = collection.name;
+        title.appendChild(link);
         
         const type = document.createElement('span');
         type.classList.add('collection-type');
@@ -25,6 +28,16 @@ function renderCollections() {
 
         const description = document.createElement('p');
         description.textContent = collection.description || 'No description';
+
+        const covers = document.createElement('div');
+        covers.classList.add('collection-covers');
+
+        collection.games.slice(0, 3).forEach(game => {
+            const img = document.createElement('img');
+            img.src = game.cover || 'assets/img/no-cover.jpg';
+            img.alt = game.name;
+            covers.appendChild(img);
+        });
 
         const actions = document.createElement('div');
         actions.classList.add('card-actions');
@@ -40,10 +53,22 @@ function renderCollections() {
         deleteBtn.classList.add('button', 'button-secondary');
 
         actions.append(editBtn, deleteBtn);
+        if (collection.games.length > 0) {
+            item.append(covers);
+        }
         item.append(title, type, description, actions);
         list.appendChild(item);
+        
+        item.addEventListener('click', (event) => {
+            if (event.target.closest('button')) {
+                return;
+            }
+            window.location.href = link.href;
+        });
     });
+    
 }
+
 
 function deleteCollection(id) {
     if (!confirm('Delete this collection? This cannot be undone.')) {

@@ -1,0 +1,78 @@
+.back-link {
+    display: inline-block;
+    margin-top: var(--space-4);
+    color: var(--secondary-color);
+}
+
+.collection-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    margin-bottom: var(--space-8);
+}
+
+#game-list {
+    --min-column: 20rem;
+}
+
+.game-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.game-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.game-card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: var(--space-4);
+}
+
+.game-card-body h2 {
+    margin: 0 0 var(--space-2);
+}
+
+.session-list {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-4) 0;
+}
+
+.session-list li {
+    padding: var(--space-2) 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.session-list p {
+    margin: 0 0 var(--space-2);
+}
+
+.session-notes {
+    font-size: .9rem;
+    font-style: italic;
+}
+
+.session-list .button {
+    padding: .2rem .6rem;
+    font-size: .85rem;
+    margin-right: var(--space-2);
+}
+
+.card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin-top: auto;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Collection</title>
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/collection.css">
+
+        <script src="js/nav.js" defer></script>
+        <script src="js/storage.js" defer></script>
+        <script src="js/collection.js" defer></script>
+    </head>
+    
+    <body>
+        <header>
+            <nav>
+                <a href="index.html" class="logo">GamePlanner+</a>
+                <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+                <ul id="nav-links">
+                    <li><a href="library.html">Library</a></li>
+                    <li><a href="explorer.html">Explorer</a></li>
+                    <li><a href="gameguide.html">GameGuide</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <a href="library.html" class="back-link">← Back to library</a>
+
+            <section class="collection-header">
+                <div>
+                    <h1 id="collection-name"></h1>
+                    <p id="collection-info"></p>
+                    <p id="collection-description"></p>
+                </div>
+                <a href="explorer.html" class="button" id="add-games-link">Add games</a>
+            </section>
+
+            <p id="empty-message" hidden>No games yet. Find some in the Explorer and add them to this collection.</p>
+            <section id="game-list" class="auto-grid"></section>
+
+            <dialog id="session-dialog" class="dialog">
+                <form id="session-form" class="dialog-form">
+                    <h2 id="session-form-title">Log session</h2>
+                    <p id="session-game-name"></p>
+
+                    <label for="session-date">Date</label>
+                    <input type="date" id="session-date" required>
+
+                    <label for="session-hours">Hours played</label>
+                    <input type="number" id="session-hours" min="0.25" step="0.25" required>
+
+                    <label for="session-notes">Notes or progress</label>
+                    <textarea id="session-notes" rows="3"></textarea>
+
+                    <div class="form-buttons">
+                        <button type="button" id="cancel-session" class="button button-secondary">Cancel</button>
+                        <button type="submit" class="button">Save</button>
+                    </div>
+                </form>
+            </dialog>
+        </main>
+        
+        <footer>
+            <p>If you have any issues, please contact the developer at developer@gmail.com</p>
+        </footer>
+    </body>
+</html>

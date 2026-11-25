@@ -39,13 +39,6 @@
     gap: var(--space-4);
 }
 
-#collection-dialog {
-    border: none;
-    border-radius: var(--radius);
-    padding: var(--space-8);
-    width: min(90%, 30rem);
-}
-
 #collection-form {
     display: flex;
     flex-direction: column;
@@ -65,4 +58,32 @@
     gap: var(--space-2);
     margin-top: auto;
     padding-top: var(--space-4);
+}
+
+.collection-covers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-2);
+    margin-bottom: var(--space-4);
+}
+
+.collection-covers img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: var(--radius);
+}
+
+.collection-card {
+    cursor: pointer;
+}
+
+.collection-card h2 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.collection-card:hover h2 a {
+    text-decoration: underline;
 }

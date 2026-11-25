@@ -1,6 +1,14 @@
 function getCollections() {
     const data = localStorage.getItem('collections');
-    return data ? JSON.parse(data) : [];
+    const collections = data ? JSON.parse(data) : [];
+
+    collections.forEach(collection => {
+        if (!collection.games) {
+            collection.games = [];
+        }
+    });
+
+    return collections;
 }
 
 function saveCollections(collections) {
