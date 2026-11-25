@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Library</title>
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/library.css">
+
+        <script src="js/nav.js" defer></script>
+        <script src="js/storage.js" defer></script>
+        <script src="js/library.js" defer></script>
+    </head>
+    
+    <body>
+        <header>
+            <nav>
+                <a href="index.html" class="logo">GamePlanner+</a>
+                <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+                <ul id="nav-links">
+                    <li><a href="library.html">Library</a></li>
+                    <li><a href="explorer.html">Explorer</a></li>
+                    <li><a href="gameguide.html">GameGuide</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- TODO: check that grid stuff is like in presentation -->
+        <main>
+            <div class="library-header">
+                <h1>My Library</h1>
+                <button id="open-form" class="button button-secondary">Add Collection</button>
+            </div>
+
+            <ul id="collection-list"></ul>
+
+            <dialog id="collection-dialog">
+                <form id="collection-form">
+                    <h2>New collection</h2>
+
+                    <label for="collection-name">Name</label>
+                    <input type="text" id="collection-name" required>
+
+                    <label for="collection-type">Type</label>
+                    <select id="collection-type">
+                        <option>Currently Playing</option>
+                        <option>Pending</option>
+                        <option>Completed</option>
+                        <option>Wishlist</option>
+                        <option>Abandoned</option>
+                        <option>Custom</option>
+                    </select>
+
+                    <label for="collection-description">Description</label>
+                    <textarea id="collection-description" rows="3"></textarea>
+
+                    <div class="form-buttons">
+                        <button type="button" id="cancel-form" class="button button-secondary">Cancel</button>
+                        <button type="submit" class="button">Save</button>
+                    </div>
+                </form>
+            </dialog>
+        </main>
+        
+        <footer>
+            <p>If you have any issues, please contact the developer at developer@gmail.com</p>
+        </footer>
+    </body>
+</html>
