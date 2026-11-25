@@ -1,0 +1,50 @@
+.game-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.game-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.game-card h2 {
+    font-size: 1.15rem;
+    margin: var(--space-4) var(--space-4) var(--space-2);
+}
+
+.game-card p {
+    margin: 0 var(--space-4) var(--space-2);
+}
+
+.game-genres {
+    font-size: var(--font-size-small);
+}
+
+.game-card .button {
+    margin: auto var(--space-4) var(--space-4);
+    background-color: var(--secondary-color);
+}
+
+.toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin-bottom: var(--space-8);
+}
+
+.toolbar input {
+    flex: 1 1 15rem;
+}
+
+#load-more {
+    display: block;
+    margin: var(--space-8) auto;
+    padding-inline: var(--space-8);
+}

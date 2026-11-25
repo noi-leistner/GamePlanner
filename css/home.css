@@ -1,5 +1,5 @@
-body {
-    font-family: var(--font-family);
+main.landing { 
+    padding-inline: 0; 
 }
 
 /* Image Card */
@@ -92,13 +92,6 @@ body {
     margin: 0;
 }
 
-.button {
-    background-color: var(--secondary-color);
-    color: var(--light-color);
-    text-decoration: none;
-    border-radius: var(--radius);
-}
-
 .cta-button {
     padding: var(--space-4) var(--space-8);
 }
@@ -119,9 +112,7 @@ body {
 }
 
 .steps {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
-    gap: var(--space-8);
+    --min-column: 14rem;
     list-style: none;
     padding: 0;
 }
@@ -235,18 +226,16 @@ body {
 }
 
 .plans {
+    --min-column: 12rem;
     flex: 3 1 30rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
-    gap: var(--space-4);
 }
 
 .plan {
     display: flex;
     flex-direction: column;
     padding: var(--space-4);
-    background-color: var(--light-color);
-    color: var(--dark-color);
+    background-color: var(--secondary-color);
+    color: var(--light-color);
     border-radius: var(--radius);
 }
 
@@ -311,10 +300,4 @@ body {
     justify-content: center;
     gap: var(--space-4);
     margin-top: var(--space-8);
-}
-
-.button-outline {
-    background-color: transparent;
-    border: 2px solid var(--dark-color);
-    color: var(--dark-color);
 }

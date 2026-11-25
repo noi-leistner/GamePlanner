@@ -4,10 +4,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Home</title>
+        <link rel="stylesheet" href="css/base.css">
         <link rel="stylesheet" href="css/layout.css">
         <link rel="stylesheet" href="css/home.css">
-        <link rel="stylesheet" href="css/base.css">
 
+        <script src="js/nav.js" defer></script>
         <script src="js/home.js" defer></script>
     </head>
 
@@ -25,12 +26,12 @@
             </nav>
         </header>
 
-        <main>
+        <main class="landing">
             <figure class="image-card">
                 <img src="assets/img/controller.jpg" alt="Player gaming with a controller">
                 <figcaption class="image-overlay">
-                    <span class="image-overlay-title">Game Planner+</span>
-                    <span class="image-overlay-subtitle">Stop losing track of what you’re playing.</span>
+                    <h1 class="image-overlay-title">GamePlanner+</h1>
+                    <p class="image-overlay-subtitle">Stop losing track of what you're playing.</p>
                 </figcaption>
             </figure>
             
@@ -56,19 +57,17 @@
                 </div>
             </section>
             
-            <br>
-            
-            <div class="call-to-action">
+            <section class="call-to-action">
                 <div class="cta-text">
                     <h2>Get started</h2>
                     <p>Find new games in the explorer page!</p>
                 </div>
                 <a href="explorer.html" class="button cta-button">Explore</a>
-            </div>
+            </section>
             
             <section class="how-it-works">
                 <h2>How it works</h2>
-                <ol class="steps">
+                <ol class="steps auto-grid">
                     <li class="step">
                         <span class="step-number">1</span>
                         <h3>Create a collection</h3>
@@ -133,7 +132,7 @@
                     <p>GamePlanner+ is free forever. Every feature, no subscriptions, no hidden costs. But you can always upgrade for more features.</p>
                 </div>
                 
-                <div class="plans">
+                <div class="plans auto-grid">
                     <article class="plan">
                         <h3>Free</h3>
                         <p class="price">€0<span>/month</span></p>
